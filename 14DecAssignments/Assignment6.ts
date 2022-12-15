@@ -47,4 +47,4 @@ countvowels=(str1:string)=>{
 }
 }
 var op1=new Operations();
-op1.setvalues("yash");
+op1.setvalues("egles");
