@@ -5,7 +5,7 @@ var Operations = /** @class */ (function () {
             var count = 0;
             for (var i = 0; i < str1.length; i++) {
                 if (str1[i] !== "a" && str1[i] !== "e" && str1[i] !== "i" &&
-                    str1[i] !== "o" && str1[i] !== "u" && str1[i] !== " ") {
+                    str1[i] !== "o" && str1[i] !== "u") {
                     count++;
                 }
             }
@@ -16,7 +16,7 @@ var Operations = /** @class */ (function () {
             var count = 0;
             for (var i = 0; i < str1.length; i++) {
                 if (str1[i] == "a" || str1[i] == "e" || str1[i] == "i" ||
-                    str1[i] == "o" || str1[i] == "u" || str1[i] !== " ") {
+                    str1[i] == "o" || str1[i] == "u") {
                     count++;
                 }
             }
@@ -38,4 +38,4 @@ var Operations = /** @class */ (function () {
     return Operations;
 }());
 var op1 = new Operations();
-op1.setvalues("egle");
+op1.setvalues("Ranisangale");
