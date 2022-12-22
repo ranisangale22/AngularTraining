@@ -1,0 +1,22 @@
+
+<input type="text" placeholder="Username" [(ngModel)]="Username" class="" >
+<br>
+<br>
+<br>
+{{Username}}
+<br>
+<br>
+<input type="reset" value="Reset User" (click)="reset()" [disabled]="Username==''">
+
+<br>
+<br>
+<br>
+
+<input type="button" value="Display Details" (click)="toggle()">
+<p *ngIf="ShowData">My name is Rani</p>
+<div *ngIf="arr.length>0">
+    <ul *ngFor="let val of arr; index as i" [ngStyle]="{backgroundColor:getcolor(i)}" 
+    style="list-style:none;"> 
+        <li>{{val}}</li>
+      </ul>
+</div>
