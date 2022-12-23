@@ -1,0 +1,44 @@
+<body>
+    <div >
+<form [formGroup]="ProjectDetail" (ngSubmit)="onSubmit()">
+
+<div class="col-sm-76">
+<label  class="col-sm-2 col-form-label"><b> Email: </b></label>
+<br>
+
+<input type="text" placeholder="Email" formControlName="email" [pattern]="emailpattern">
+<div style="color: red;" *ngIf="ProjectDetail.controls['email'].touched && ProjectDetail.controls['email'].invalid">
+<div *ngIf="ProjectDetail.controls['email'].touched && ProjectDetail.controls['email'].invalid">
+    <span *ngIf="ProjectDetail.controls['email'].hasError('required')">email is required</span>
+    <span *ngIf="ProjectDetail.controls['email'].hasError('pattern')">inavlid email</span>
+</div>
+</div>
+</div><br>
+<div class="col-sm-76">
+    <label  class="col-sm-2 col-form-label"><b>Project Name: </b></label>
+    <br>
+    
+    <input type="text" placeholder="project Name" formControlName="projectName" >
+    <div style="color: red;" *ngIf="ProjectDetail.controls['projectName'].touched && ProjectDetail.controls['projectName'].invalid">
+    <div *ngIf="ProjectDetail.controls['projectName'].touched && ProjectDetail.controls['projectName'].invalid">
+        <span *ngIf="ProjectDetail.controls['projectName'].hasError('required')">project name is required</span>
+       
+    </div>
+    </div>
+    </div><br>
+<div>
+    <label  class="col-sm-2 col-form-label"><b>Select Project Status</b></label><br>
+    <select formControlName="projectStatus">
+        <option *ngFor="let sub of prstatus" value="{{sub.value}}">
+            {{sub.viewValue}}
+        </option>
+    </select>
+</div><br>
+<br>
+<div>
+<input type="submit" value="submit">
+</div>
+</form>
+
+</div>
+</body> 

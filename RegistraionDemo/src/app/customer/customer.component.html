@@ -1,0 +1,43 @@
+<body>
+    <div >
+<form [formGroup]="CustomerForm" (ngSubmit)="onSubmit()">
+
+<div class="col-sm-76">
+<label  class="col-sm-2 col-form-label"><b>Customer Email: </b></label>
+<br>
+
+<input type="text" placeholder="Email" formControlName="email" [pattern]="emailpattern">
+<div style="color: red;" *ngIf="CustomerForm.controls['email'].touched && CustomerForm.controls['email'].invalid">
+<div *ngIf="CustomerForm.controls['email'].touched && CustomerForm.controls['email'].invalid">
+    <span *ngIf="CustomerForm.controls['email'].hasError('required')">email is required</span>
+    <span *ngIf="CustomerForm.controls['email'].hasError('pattern')">inavlid email</span>
+</div>
+</div>
+</div><br>
+<div>
+    <label for="password"><b>Customer Password: </b></label><br>
+    <input type="password" placeholder="Password" formControlName="password" required>
+    <div style="color: red;" *ngIf="CustomerForm.controls['password'].touched && CustomerForm.controls['password'].invalid">
+    <span *ngIf="CustomerForm.controls['password'].hasError('required')">password is required</span>
+</div>
+</div><br>
+<div>
+    <label  class="col-sm-2 col-form-label"><b>Select Subscription</b></label><br>
+    <select formControlName="subscription">
+        <option *ngFor="let sub of subscriptions" value="{{sub.value}}">
+            {{sub.viewValue}}
+        </option>
+    </select>
+</div><br>
+
+<br>
+
+
+
+<div>
+<input type="submit" value="submit">
+</div>
+</form>
+
+</div>
+</body> 
