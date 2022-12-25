@@ -1,0 +1,19 @@
+
+<table border="1">
+    <tr>
+        <td>Student Id</td>
+        <td>Student Name</td>
+        <td>Student Address</td>
+        <td>Student mobilemo</td>  
+        <td>Edit</td>  
+        <td>Delete</td>     
+    </tr> 
+    <tr *ngFor="let s of std">
+        <td >{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.addr}}</td>
+        <td>{{s.mob}}</td>
+        <td><button style="border: none;" (click)="getByID(s.id)"><i class="fas fa-edit"></i></button></td>
+        <td><button style="border: none;" (click)="deleteStudent(s.id)"><i class="fas fa-trash"></i></button></td>
+    </tr>
+</table>

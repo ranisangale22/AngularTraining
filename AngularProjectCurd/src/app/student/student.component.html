@@ -1,0 +1,36 @@
+
+
+    <div class="container">
+        <div class="row">
+        <div class="form-group col-md-2">
+              <input type="text" class="form-control" pattern="[a-zA-Z]+$" #name="ngModel"  placeholder="Enter name" [(ngModel)]="std.name" required>
+          <span *ngIf="name.invalid && name.touched" style="color: red;">Please enter valid name</span>
+            </div>
+          
+          <div class="form-group col-md-2">
+              <input type="text" class="form-control"  minlength="10" #mob="ngModel" required minlength="10"  placeholder="Enter Mobile" [(ngModel)]="std.mob">
+              <span *ngIf="mob.invalid && mob.touched"  style="color: red;">Please enter valid mobile</span>
+          </div>
+          
+        </div>
+        <div class="row">
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" #addr="ngModel" required  placeholder="Enter Address" [(ngModel)]="std.addr" >
+           <span *ngIf="addr.invalid && addr.touched" style="color: red;">Please enter valid address</span>
+        </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <button class="btn btn-success btn-lg btn-block" [disabled]="name.invalid || mob.invalid || addr.invalid" (click)="onSubmit()">Submit</button>
+            </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <button class="btn btn-warning btn-lg btn-block" (click)="reset()" [disabled]="name.invalid && mob.invalid && addr.invalid">reset</button>
+    
+                </div>
+                </div>
+        
+        </div>
+
+

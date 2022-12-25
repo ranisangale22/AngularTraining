@@ -1,0 +1,61 @@
+{
+    "getAllData": [
+
+        {
+    
+          "id": 5,
+    
+          "name": "jaynam",
+    
+          "addr": "indore",
+    
+          "mob": 9098902558,
+    
+          "email": "jaynam.sanghvi@yash.com"
+    
+        },
+    
+        {
+    
+            "id": 6,
+    
+            "name": "jaynam",
+      
+            "addr": "indore",
+      
+            "mob": 9098902558,
+      
+            "email": "jaynam.sanghvi@yash.com"
+    
+        },
+    
+        {
+    
+            "id": 7,
+    
+            "name": "jaynam",
+      
+            "addr": "indore",
+      
+            "mob": 9098902558,
+      
+            "email": "jaynam.sanghvi@yash.com"
+    
+        },
+    
+        {
+    
+            "id": 8,
+    
+            "name": "jaynam",
+      
+            "addr": "indore",
+      
+            "mob": 9098902558,
+      
+            "email": "jaynam.sanghvi@yash.com"
+    
+        }
+    
+      ]
+}

@@ -1,0 +1,22 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "rani",
+      "mob": "8765545666",
+      "addr": "Pune"
+    },
+    {
+      "id": 3,
+      "name": "ranisangale",
+      "mob": 918806863289,
+      "addr": "Pune1"
+    },
+    {
+      "id": 4,
+      "name": "sai",
+      "mob": "8998756776",
+      "addr": "Mumbai"
+    }
+  ]
+}
