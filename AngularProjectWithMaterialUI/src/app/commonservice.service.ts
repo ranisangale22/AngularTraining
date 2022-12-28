@@ -11,7 +11,7 @@ export class CommonserviceService {
   public constructor(private http:HttpClient) {
 
    }
-   saveStudent(std:Student)
+   saveStudent(std:Student):Observable<Student>
    {
     return this.http.post<Student>(this.url+"/student",std);
    }

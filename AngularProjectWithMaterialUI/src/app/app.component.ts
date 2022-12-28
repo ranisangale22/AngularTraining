@@ -23,29 +23,32 @@ export class AppComponent implements OnInit {
 
   std:Student={fullName:'',email:'',mobile:'',password:'',skill:'',gender:'',dateofBirth:''};
   
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private cs:CommonserviceService) { }
   stu!:Student[]
   
   studentform!:FormGroup;
   emailpattern!:"^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-  namepattern!:"^[a-zA-Z ]{2,20}$";
+  namepattern!:"[a-zA-Z][a-zA-Z ]+";
   passPattern="^[A-Za-z0-9]*$"
   ngOnInit(): void {
     this.studentform=this.fb.group({
-      sid:[''],
-      fullName:['',[Validators.required],Validators.minLength(6),Validators.maxLength(32)],
-      password:['',[Validators.required],Validators.pattern(this.passPattern)],
+      
+      fullName:['',[Validators.required],Validators.minLength(6),Validators.pattern(this.namepattern)],
+      password:['',[Validators.required],Validators.minLength(6),Validators.pattern('[a-zA-Z0-9]{2,}')],
       dateofBirth:['',[Validators.required]],
       skill:['',[Validators.required]],
       gender:['',[Validators.required]],
       mobile:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
-      email:['',[Validators.required,Validators.pattern(this.emailpattern)]]
+      email:['',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]]
    
     })
   }
+  
   onSubmit()
   {
     console.log(this.studentform.value)
-    //this.cs.saveStudent(this.studentform.value).subscribe();
+    this.cs.saveStudent(this.studentform.value).subscribe();
+    alert("Data Saved");
+    window.location.reload();
   }
 }

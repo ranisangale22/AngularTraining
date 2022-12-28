@@ -8,7 +8,7 @@ import { MatModuleModule } from './mat-module/mat-module.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core'
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,8 @@ import {MatNativeDateModule} from '@angular/material/core'
     ReactiveFormsModule,
     MatModuleModule,
     FormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    HttpClientModule
    
   ],
   providers: [],
