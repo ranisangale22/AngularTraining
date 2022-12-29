@@ -1,0 +1,58 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "fullName": "Rani Sangale",
+      "email": "rani.sangale@gmail.com",
+      "mobile": "8806963289",
+      "password": "rani123456",
+      "dateofBirth": "02/09/1995",
+      "skill": "Angular Basic",
+      "gender": "Female"
+    },
+    {
+      "fullName": "test",
+      "password": "1234",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Female",
+      "mobile": "1234567899",
+      "email": "rani@gmail.com",
+      "id": 2
+    },
+    {
+      "fullName": "rani1",
+      "password": "123dsdf",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Female",
+      "mobile": "5567787666",
+      "email": "rani@gmail.com",
+      "id": 3
+    },
+    {
+      "fullName": "abctest",
+      "password": "i876yhg",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Male",
+      "mobile": "6765544555",
+      "email": "rani@gmail.com",
+      "id": 5
+    },
+    {
+      "fullName": "chandu",
+      "password": "12edrrfd",
+      "dateofBirth": "2022-12-28T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Male",
+      "mobile": "8888888888",
+      "email": "rani@gmail.com",
+      "id": 6
+    }
+  ],
+  "login":[{
+    "userName":"Ranisangale",
+    "password":"rani123"
+  }]
+}

@@ -1,0 +1,50 @@
+<br>
+<br>
+<div class="contents">
+<div class="leftdiv">
+
+</div>
+   
+  <div class="middlediv">
+    <form >
+        <mat-card class="example-card">
+            <mat-card-header style="background-color:cadetblue"> 
+                <br>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title style="float: left;"> Login</mat-card-title>
+                
+              </mat-card-header>
+              
+         <br>
+            <mat-card-content>
+                <mat-form-field appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <input matInput placeholder="Placeholder" name="userName" [formControl]="userName" minlength="6" pattern="[a-zA-Z][a-zA-Z ]+">
+                    <mat-icon matSuffix>perm_identity</mat-icon>
+                  
+                </mat-form-field>&nbsp;&nbsp;
+                 <br>
+                 <br>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Placeholder" [formControl]="password" minlength="6" [type]="hide ? 'password' : 'text'" name="password" >
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>  
+                        
+                  </mat-form-field>&nbsp;&nbsp;
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="accent" type="submit" (click)="onSubmit()">Login</button>
+              
+              </mat-card-actions>
+          </mat-card>
+          
+    </form>
+  </div>
+
+</div>
+
+
+
