@@ -1,0 +1,159 @@
+<br>
+<br>
+
+<div class="sidebar">
+  
+  <br>
+  <br>
+  <br>
+
+  <button mat-raised-button color="primary" (click)="onSidenavbar()">Register</button>
+</div>
+
+<div class="content" *ngIf="isValid">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="all fields are mandatory.">
+      <form [formGroup]="firstFormGroup" style="margin-left: 87px;">
+        <ng-template matStepLabel>Basic Information</ng-template>
+        <br>
+
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput placeholder="Placeholder"  required formControlName="fullName">
+          <mat-icon matSuffix>perm_identity</mat-icon>
+          <mat-error *ngIf="firstFormGroup.controls['fullName'].invalid">{{getErrorforFullname()}}</mat-error>
+           
+           
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Father Name</mat-label>
+          <input matInput placeholder="Placeholder"   formControlName="fatherName" required>
+          
+          <mat-icon matSuffix>perm_identity</mat-icon>
+          <mat-error *ngIf="firstFormGroup.controls['fatherName'].invalid">{{getErrorforFatherName()}}</mat-error>
+          
+           
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Mother Name</mat-label>
+          <input matInput placeholder="Placeholder"  formControlName="motherName" required>
+         
+          <mat-icon matSuffix>perm_identity</mat-icon>
+          <mat-error *ngIf="firstFormGroup.controls['motherName'].invalid">{{getErrorformotherName()}}</mat-error>
+          
+
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="email" >
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error *ngIf="firstFormGroup.controls['email'].invalid">{{getErrorForemail()}}</mat-error>
+          
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile</mat-label>
+          <input matInput placeholder="Placeholder"  formControlName="mobile">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-error *ngIf="firstFormGroup.controls['mobile'].invalid">{{getErrorForMobile()}}</mat-error>
+          
+        </mat-form-field>&nbsp;&nbsp;
+
+        <mat-form-field appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="picker"  required formControlName="date">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="firstFormGroup.controls['date'].invalid">{{getErrorFordate()}}</mat-error>
+          
+        </mat-form-field>&nbsp;&nbsp;
+        <br>
+        
+        <mat-radio-group aria-label="Select Gender"  >
+          <mat-radio-button value="Male">Male</mat-radio-button>
+          <mat-radio-button value="Female">Female</mat-radio-button>
+        </mat-radio-group>
+        
+        <div>
+          <button mat-button matStepperNext type="submit">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="Bank Details (Optional)">
+      <br>
+      <br>
+      <form [formGroup]="secondFormGroup" style="margin-left: 87px;">
+       
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="fullName" >
+          <mat-icon matSuffix>perm_identity</mat-icon>
+
+
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Account Number</mat-label>
+          <input matInput placeholder="Placeholder"  formControlName="accountNumber">
+          <mat-icon matSuffix>edit</mat-icon>
+          <mat-error *ngIf="secondFormGroup.controls['accountNumber'].invalid">{{getErrorForAccountnumber()}}</mat-error>
+
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+          <mat-label>Bank Name</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="bankName">
+          <mat-icon matSuffix>home</mat-icon>
+        </mat-form-field>&nbsp;&nbsp;
+
+        <mat-form-field appearance="outline">
+          <mat-label>IFSC Code</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="IFSCCode" >
+          <mat-icon matSuffix>edit</mat-icon>
+        </mat-form-field>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <label>Internate Banking </label>
+        <mat-radio-group aria-label="Internate Banking" formControlName="internateBanking">
+          <mat-radio-button value="Yes">Yes</mat-radio-button>
+          <mat-radio-button value="No">No</mat-radio-button>
+        </mat-radio-group>&nbsp;&nbsp;
+        <label>Mobile Banking</label>
+        <mat-radio-group aria-label="Mobile Banking" formControlName="mobileBanking">
+          <mat-radio-button value="Yes">Yes</mat-radio-button>
+          <mat-radio-button value="No">No</mat-radio-button>
+        </mat-radio-group>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Communication Address">
+      <br>
+      <br>
+      <form [formGroup]="thirdFormGroup" style="margin-left: 87px;">
+        <mat-form-field appearance="outline" style="width: 50%">
+          <mat-label>Present Address</mat-label>
+          <textarea matInput formControlName="presentAdress" maxlength="60"></textarea>
+        <mat-hint>{{thirdFormGroup.controls['presentAdress'].value?.length}}/60</mat-hint>
+        <mat-error *ngIf="thirdFormGroup.controls['presentAdress'].invalid">{{geterrorForPresentAdress()}}</mat-error>
+       
+      </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" style="width: 50%">
+          <mat-label>Current Address</mat-label>
+          <textarea matInput formControlName="currentAdress" maxlength="60" ></textarea>
+          <mat-hint>{{thirdFormGroup.controls['currentAdress'].value?.length}}/60</mat-hint>
+          <mat-error *ngIf="thirdFormGroup.controls['currentAdress'].invalid">{{geterrorForCurrentAdress()}}</mat-error>
+       
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          
+            <button mat-button matStepperNext (click)="firstSubmit()" type="submit">Submit</button>
+         
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+</div>
+
