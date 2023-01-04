@@ -1,0 +1,123 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "fullName": "Rani Sangale",
+      "email": "rani.sangale@gmail.com",
+      "mobile": "8806963289",
+      "password": "rani123456",
+      "dateofBirth": "02/09/1995",
+      "skill": "Angular Basic",
+      "gender": "Female"
+    },
+    {
+      "fullName": "test",
+      "password": "1234",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Female",
+      "mobile": "1234567899",
+      "email": "rani@gmail.com",
+      "id": 2
+    },
+    {
+      "fullName": "rani1",
+      "password": "123dsdf",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Female",
+      "mobile": "5567787666",
+      "email": "rani@gmail.com",
+      "id": 3
+    },
+    {
+      "fullName": "abctest",
+      "password": "i876yhg",
+      "dateofBirth": "2022-12-27T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Male",
+      "mobile": "6765544555",
+      "email": "rani@gmail.com",
+      "id": 5
+    },
+    {
+      "fullName": "chandu",
+      "password": "12edrrfd",
+      "dateofBirth": "2022-12-28T18:30:00.000Z",
+      "skill": "Angular Intermediate",
+      "gender": "Male",
+      "mobile": "8888888888",
+      "email": "rani@gmail.com",
+      "id": 6
+    },
+    {
+      "fullName": "ssadsa",
+      "password": "ggt566",
+      "dateofBirth": "2023-01-02T18:30:00.000Z",
+      "skill": "Angular Advanced",
+      "gender": "Male",
+      "mobile": "1234567899",
+      "email": "aa@gmail.com",
+      "id": 7
+    }
+  ],
+  "login": [
+    {
+      "userName": "Ranisangale",
+      "password": "rani123"
+    }
+  ],
+  "basicDetails": [
+    {
+      "id": 1,
+      "fullName": "ranisss",
+      "motherName": "teststses",
+      "fatherName": "testtest",
+      "email": "rani.sangale@gmail.com",
+      "mobile": "1234567899",
+      "dateofBirth": "02/09/1995",
+      "gender": "Female"
+    },
+    {
+      "fullName": "test test",
+      "fatherName": "bhausaheb",
+      "motherName": "sunita ",
+      "email": "rani.sangale@gmal.com",
+      "mobile": "3333333333",
+      "date": "2023-01-01T18:30:00.000Z",
+      "id": 2
+    }
+  ],
+  "adressDetails": [
+    {
+      "presentAdress": "dsadsa",
+      "currentAdress": "aadads",
+      "id": 1
+    },
+    {
+      "presentAdress": "test testccccc",
+      "currentAdress": "test ",
+      "id": 2
+    }
+  ],
+  "bankDetails": [
+    {
+      "fullName": "Rani",
+      "accountNumber": 123,
+      "bankName": "ABC",
+      "IFSCCode": "ACB123",
+      "internateBanking": "Yes",
+      "mobileBanking": "Yes",
+      "id": 1
+    },
+    {
+      "accountNumber": "",
+      "bankName": "",
+      "IFSCCode": "",
+      "internateBanking": "",
+      "mobileBanking": "",
+      "fullName": "test",
+      "id": 2
+    }
+  ]
+}
